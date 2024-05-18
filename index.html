@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+    <link rel="stylesheet" href="page.css">
+</head>
+<body id="body">
+    <div class="name">
+        <span style="font-size: 60px;">T</span>HE <span style="font-size: 60px;">N</span>EWS <span style="font-size: 60px;">H</span>IVE
+    </div>
+    <div>
+        <nav class="navbar">
+            <ul class="nav-elements">
+                <li onclick="select(this)" id="home" class="selected"><a href="#">HOME<a></li>
+                <li onclick="select(this)"><a href="#">NEWS</a></li>
+                <li onclick="select(this)"><a href="#">WORLD</a></li>
+                <li onclick="select(this)"><a href="#">BUSINESS</a></li>
+                <li onclick="select(this)"><a href="#">POLITICS</a></li>
+                <li onclick="select(this)"><a href="#">ENTERTAINMENT</a></li>
+                <li onclick="select(this)" style="position: relative;"><a href="#" style="display: flex; ">SPORTS  <img src="down.svg" alt="" id="down" onclick="dropdown(event)"></a>
+                    <div class="dropup" id="menu">
+                        <ul class="menu-ul">
+                            <li><a href="">Cricket</a></li>
+                            <li><a href="">Football</a></li>
+                            <li><a href="">Hockey</a></li>
+                        </ul>
+                    </div>
+                
+                </li>
+                
+            </ul>
+            <div class="search" style="margin-right: 12px;" id="searchid"><svg xmlns="http://www.w3.org/2000/svg" height="18px" width="18px" viewBox="0 0 24 24" fill="black" class="w-6 h-6">
+                <path fill-rule="evenodd" d="M10.5 3.75a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5ZM2.25 10.5a8.25 8.25 0 1 1 14.59 5.28l4.69 4.69a.75.75 0 1 1-1.06 1.06l-4.69-4.69A8.25 8.25 0 0 1 2.25 10.5Z" clip-rule="evenodd" />
+              </svg>
+              <input type="text" name="" id="" placeholder="Search">
+            </div>
+        </nav>
+    </div>
+    <div class="breaking-news">
+       <span style="display: flex; align-items: center; float: inline-start;"><svg xmlns="http://www.w3.org/2000/svg" width="17px" height="17px" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+        <path fill-rule="evenodd" d="M14.615 1.595a.75.75 0 0 1 .359.852L12.982 9.75h7.268a.75.75 0 0 1 .548 1.262l-10.5 11.25a.75.75 0 0 1-1.272-.71l1.992-7.302H3.75a.75.75 0 0 1-.548-1.262l10.5-11.25a.75.75 0 0 1 .913-.143Z" clip-rule="evenodd" />
+      </svg> &nbsp; <b>BREAKING NEWS</b></span>
+            <span style="margin-left: 7%; color: rgb(63, 61, 61);">Local coming back on street again after</span>
+            <span style="color: rgb(63, 61, 61); float: inline-end; display: flex; align-items: center;"><img src="icons8-rain-cloud-16.png" alt="" width="20px" height="20px" ><span style="margin:0px 6px;" id="today-date">September 14,2023 in</span></span>
+    
+    </div>
+    <div class="allnews" style="margin-top: 2%; display: flex; align-items: center; justify-content: space-between;">
+        <div class="image-news" style="height:70vh; width:75%;">
+             <div class="img1-block"  onclick="displaynews('img-block1')">
+                <img src="" alt="" width="100%" height="100%" id="img1" class="imgnews">
+                <div  class="img-text" id="img1-text">
+                 <p id="img1-type">
+                    <span id="tag1" style="background-color:black;  border-radius:15px; margin-right: 4%; padding: 1% 3%; font-size: 18px;"></span>
+                    <span style="background-color:black;  border-radius:15px; margin-right: 4%; padding: 1% 3%; font-size: 18px;">Featured</span>
+                </p>
+                 <div id="img-topic1" style="font-size: 30px; ">text</div>
+                 <p id="img1-data"  style="display: flex; align-items: center;">
+                    <span  style=" display: flex; align-items: center;"><svg xmlns="http://www.w3.org/2000/svg" height="16px" width="16px" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                         <path d="M15.75 8.25a.75.75 0 0 1 .75.75c0 1.12-.492 2.126-1.27 2.812a.75.75 0 1 1-.992-1.124A2.243 2.243 0 0 0 15 9a.75.75 0 0 1 .75-.75Z" />
+                         <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM4.575 15.6a8.25 8.25 0 0 0 9.348 4.425 1.966 1.966 0 0 0-1.84-1.275.983.983 0 0 1-.97-.822l-.073-.437c-.094-.565.25-1.11.8-1.267l.99-.282c.427-.123.783-.418.982-.816l.036-.073a1.453 1.453 0 0 1 2.328-.377L16.5 15h.628a2.25 2.25 0 0 1 1.983 1.186 8.25 8.25 0 0 0-6.345-12.4c.044.262.18.503.389.676l1.068.89c.442.369.535 1.01.216 1.49l-.51.766a2.25 2.25 0 0 1-1.161.886l-.143.048a1.107 1.107 0 0 0-.57 1.664c.369.555.169 1.307-.427 1.605L9 13.125l.423 1.059a.956.956 0 0 1-1.652.928l-.679-.906a1.125 1.125 0 0 0-1.906.172L4.575 15.6Z" clip-rule="evenodd" />
+                        </svg>&nbsp;</span> <span style="padding-right: 5%;" id="img-author1">Theme...</span>
+                  <span style="display: flex; align-items: center;" ><svg xmlns="http://www.w3.org/2000/svg" width="15px" height:"15px" viewBox="0 0 24 24" fill="white" class="w-6 h-6">
+                    <path fill-rule="evenodd" d="M6.75 2.25A.75.75 0 0 1 7.5 3v1.5h9V3A.75.75 0 0 1 18 3v1.5h.75a3 3 0 0 1 3 3v11.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V7.5a3 3 0 0 1 3-3H6V3a.75.75 0 0 1 .75-.75Zm13.5 9a1.5 1.5 0 0 0-1.5-1.5H5.25a1.5 1.5 0 0 0-1.5 1.5v7.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5v-7.5Z" clip-rule="evenodd" />
+                  </svg>&nbsp; <span id="img-date1">October 18,2022</span></span></p>
+                </div>
+            </div>
+
+
+             <div class="img2-block"  onclick="displaynews('img-block2')">
+                <img src="" alt="" width="100%" height="100%" id="img2" class="imgnews">
+                <div  class="img-text" id="img2-text" >
+                    <p id="img2-type">
+                       <span style="background-color:black;  border-radius:15px; margin-right: 4%; padding: 1% 3%; font-size: 18px;">Featured</span>
+                       <span id="tag2" style="background-color:black;  border-radius:15px; margin-right: 4%; padding: 1% 3%; font-size: 18px;"></span>
+                    </p>
+                    <div id="img-topic2" style="font-size: 25px; ">Jane became one of the most...</div>
+                    <p id="img2-data"><span style=" display: flex; align-items: center;"> <svg xmlns="http://www.w3.org/2000/svg" height="16px" width="16px" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path d="M15.75 8.25a.75.75 0 0 1 .75.75c0 1.12-.492 2.126-1.27 2.812a.75.75 0 1 1-.992-1.124A2.243 2.243 0 0 0 15 9a.75.75 0 0 1 .75-.75Z" />
+                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM4.575 15.6a8.25 8.25 0 0 0 9.348 4.425 1.966 1.966 0 0 0-1.84-1.275.983.983 0 0 1-.97-.822l-.073-.437c-.094-.565.25-1.11.8-1.267l.99-.282c.427-.123.783-.418.982-.816l.036-.073a1.453 1.453 0 0 1 2.328-.377L16.5 15h.628a2.25 2.25 0 0 1 1.983 1.186 8.25 8.25 0 0 0-6.345-12.4c.044.262.18.503.389.676l1.068.89c.442.369.535 1.01.216 1.49l-.51.766a2.25 2.25 0 0 1-1.161.886l-.143.048a1.107 1.107 0 0 0-.57 1.664c.369.555.169 1.307-.427 1.605L9 13.125l.423 1.059a.956.956 0 0 1-1.652.928l-.679-.906a1.125 1.125 0 0 0-1.906.172L4.575 15.6Z" clip-rule="evenodd" />
+                      </svg>&nbsp; <span id="img-author2">Theme...</span></span>
+                      <br>
+                      <span style="display: flex; align-items: center;"><svg xmlns="http://www.w3.org/2000/svg" width="15px" height:"15px" viewBox="0 0 24 24" fill="white" class="w-6 h-6">
+                       <path fill-rule="evenodd" d="M6.75 2.25A.75.75 0 0 1 7.5 3v1.5h9V3A.75.75 0 0 1 18 3v1.5h.75a3 3 0 0 1 3 3v11.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V7.5a3 3 0 0 1 3-3H6V3a.75.75 0 0 1 .75-.75Zm13.5 9a1.5 1.5 0 0 0-1.5-1.5H5.25a1.5 1.5 0 0 0-1.5 1.5v7.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5v-7.5Z" clip-rule="evenodd" />
+                     </svg>&nbsp; <span id="img-date2">October 18,2022</span></span></p>
+                   </div>
+            </div>
+
+
+             <div class="img3-block"  onclick="displaynews('img-block3')">
+                <img src="" alt="" width="100%" height="100%" id="img3" class="imgnews">
+                <div  class="img-text" id="img3-text" >
+                    <p id="img3-type">
+                        <span style="background-color:black;  border-radius:15px; margin-right: 4%; padding: 1% 3%; font-size: 18px;">Featured</span>
+                        <span id="tag3" style="background-color:black;  border-radius:15px; margin-right: 4%; padding: 1% 3%; font-size: 18px;"></span>
+                    </p>
+                    <div id="img-topic3" style="font-size: 25px; "></div>
+                    <p id="img3-data" ><span style=" display: flex; align-items: center;"><svg xmlns="http://www.w3.org/2000/svg" height="16px" width="16px" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path d="M15.75 8.25a.75.75 0 0 1 .75.75c0 1.12-.492 2.126-1.27 2.812a.75.75 0 1 1-.992-1.124A2.243 2.243 0 0 0 15 9a.75.75 0 0 1 .75-.75Z" />
+                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM4.575 15.6a8.25 8.25 0 0 0 9.348 4.425 1.966 1.966 0 0 0-1.84-1.275.983.983 0 0 1-.97-.822l-.073-.437c-.094-.565.25-1.11.8-1.267l.99-.282c.427-.123.783-.418.982-.816l.036-.073a1.453 1.453 0 0 1 2.328-.377L16.5 15h.628a2.25 2.25 0 0 1 1.983 1.186 8.25 8.25 0 0 0-6.345-12.4c.044.262.18.503.389.676l1.068.89c.442.369.535 1.01.216 1.49l-.51.766a2.25 2.25 0 0 1-1.161.886l-.143.048a1.107 1.107 0 0 0-.57 1.664c.369.555.169 1.307-.427 1.605L9 13.125l.423 1.059a.956.956 0 0 1-1.652.928l-.679-.906a1.125 1.125 0 0 0-1.906.172L4.575 15.6Z" clip-rule="evenodd" />
+                      </svg> &nbsp; <span id="img-author3">Theme...</span></span>
+                      <br>
+                      <span style="display: flex; align-items: center;"><svg xmlns="http://www.w3.org/2000/svg" width="15px" height:"15px" viewBox="0 0 24 24" fill="white" class="w-6 h-6">
+                       <path fill-rule="evenodd" d="M6.75 2.25A.75.75 0 0 1 7.5 3v1.5h9V3A.75.75 0 0 1 18 3v1.5h.75a3 3 0 0 1 3 3v11.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V7.5a3 3 0 0 1 3-3H6V3a.75.75 0 0 1 .75-.75Zm13.5 9a1.5 1.5 0 0 0-1.5-1.5H5.25a1.5 1.5 0 0 0-1.5 1.5v7.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5v-7.5Z" clip-rule="evenodd" />
+                     </svg>&nbsp; <span id="img-date3">October 18,2022</span></span></p>
+                   </div>
+            </div>
+
+
+             <div class="img4-block" onclick="displaynews('img-block4')" >
+                <img src="" alt="" width="100%" height="100%" id="img4" class="imgnews">
+                <div  class="img-text" id="img4-text" >
+                    <p id="img4-type">
+                        <span style="background-color:black;  border-radius:15px; margin-right: 4%; padding: 1% 3%; font-size: 18px;">Featured</span>
+                        <span  id="tag4" style="background-color:black;  border-radius:15px; margin-right: 4%; padding: 1% 3%; font-size: 18px;"></span>
+                    </p>
+                    <div id="img-topic4" style="font-size: 25px; "></div>
+                    <p id="img4-data">
+                        <span style=" display: flex; align-items: center;"><svg xmlns="http://www.w3.org/2000/svg" height="16px" width="16px" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path d="M15.75 8.25a.75.75 0 0 1 .75.75c0 1.12-.492 2.126-1.27 2.812a.75.75 0 1 1-.992-1.124A2.243 2.243 0 0 0 15 9a.75.75 0 0 1 .75-.75Z" />
+                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM4.575 15.6a8.25 8.25 0 0 0 9.348 4.425 1.966 1.966 0 0 0-1.84-1.275.983.983 0 0 1-.97-.822l-.073-.437c-.094-.565.25-1.11.8-1.267l.99-.282c.427-.123.783-.418.982-.816l.036-.073a1.453 1.453 0 0 1 2.328-.377L16.5 15h.628a2.25 2.25 0 0 1 1.983 1.186 8.25 8.25 0 0 0-6.345-12.4c.044.262.18.503.389.676l1.068.89c.442.369.535 1.01.216 1.49l-.51.766a2.25 2.25 0 0 1-1.161.886l-.143.048a1.107 1.107 0 0 0-.57 1.664c.369.555.169 1.307-.427 1.605L9 13.125l.423 1.059a.956.956 0 0 1-1.652.928l-.679-.906a1.125 1.125 0 0 0-1.906.172L4.575 15.6Z" clip-rule="evenodd" />
+                      </svg> &nbsp; <span id="img-author4">Theme...</span></span>
+                      <br>
+                      <span style="display: flex; align-items: center;"><svg xmlns="http://www.w3.org/2000/svg" width="15px" height:"15px" viewBox="0 0 24 24" fill="white" class="w-6 h-6">
+                       <path fill-rule="evenodd" d="M6.75 2.25A.75.75 0 0 1 7.5 3v1.5h9V3A.75.75 0 0 1 18 3v1.5h.75a3 3 0 0 1 3 3v11.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V7.5a3 3 0 0 1 3-3H6V3a.75.75 0 0 1 .75-.75Zm13.5 9a1.5 1.5 0 0 0-1.5-1.5H5.25a1.5 1.5 0 0 0-1.5 1.5v7.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5v-7.5Z" clip-rule="evenodd" />
+                     </svg>&nbsp; <span id="img-date4">October 18,2022</span></span>
+                    </p>
+                   </div>
+            </div>
+        </div>
+
+
+
+        <div class="tablenews">
+            <div class="newsbutton">
+                <div style="display:inline-block; width: 50%; height: 100%; border-radius:8px 0px 0px 8px ;"><button class="newsbtn1 selected2" id="latestid" onclick="select2(this)">Latest</button></div>
+                <div style="display:inline-block; width: 50%; height: 100%; border-radius:0px 8px 8px 0px"><button class="newsbtn2" onclick="select2(this)">Popular</button></div>
+            </div>
+            <div id="newsstack">
+            
+
+            
+             </div>
+        </div>
+    </div>
+    <script src="page.js"></script>
+</body>
+</html>
+
+
+
+  
